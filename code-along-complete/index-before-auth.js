@@ -24,9 +24,9 @@ document.addEventListener(`DOMContentLoaded`, async function(event) {
     let comments = ``
 
     // Loop through the post's comments
-    for (let i=0; i < post.comments.length; i++) {
+    for (let j=0; j < post.comments.length; j++) {
       // Create a variable for each comment
-      let comment = post.comments[i]
+      let comment = post.comments[j]
 
       // Add HTML markup for the comment to the comment string
       comments = comments + `<div><strong>${comment.userName}</strong> ${comment.body}</div>`
