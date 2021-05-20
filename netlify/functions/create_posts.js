@@ -46,7 +46,7 @@ exports.handler = async function(event) {
   })
   let post3 = await db.collection('posts').add({ 
     userName: `Anonymous User`, 
-    imageUrl: `https://images.unsplash.com/photo-1603394807379-48524ef0e6cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGFjb3N8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`, 
+    imageUrl: `https://images.unsplash.com/photo-1508154048109-de555266b70a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`, 
     numberOfLikes: 0, 
     created: firebase.firestore.FieldValue.serverTimestamp() })
 
@@ -54,7 +54,7 @@ exports.handler = async function(event) {
   let comment1 = await db.collection('comments').add({ userName: `Anonymous User`, postId: post1.id, body: `#tacotuesday` })
   let comment2 = await db.collection('comments').add({ userName: `Anonymous User`, postId: post1.id, body: `This looks yummy!` })
   let comment3 = await db.collection('comments').add({ userName: `Anonymous User`, postId: post2.id, body: `Tacos al pastor` })
-  let comment4 = await db.collection('comments').add({ userName: `Anonymous User`, postId: post3.id, body: `I love Jarritos!` })
+  let comment4 = await db.collection('comments').add({ userName: `Anonymous User`, postId: post3.id, body: `Tacos, obviously 🙄` })
 
   return {
     statusCode: 200,
